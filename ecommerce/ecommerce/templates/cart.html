@@ -49,7 +49,7 @@ Cart ABC pvt ltd
             {% for cart_item in cart_items %}
             <tr>
                 <td>
-                    <a href="cart_item.product.get_absolute_url"><img src="{{cart_item.product.image.url}}" style="height:100px; width:100px;" alt="" class="float-left rounded custom_image"></a>
+                    <a href="{% url 'cart:cart_detail' %}"><img src="{{cart_item.product.image.url}}" style="height:100px; width:100px;" alt="" class="float-left rounded custom_image"></a>
                 </td>
                 <td class="text-left">
                     {{cart_item.product.name}}
